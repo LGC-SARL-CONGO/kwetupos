@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentação do Produto</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+        color: #333;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #333;
+        /* margin: 0; */
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 0;
+      }
+      ul li {
+        background: #fff;
+        /* margin: 5px 0; */
+        padding: 10px;
+        border-radius: 4px;
+      }
+      img {
+        max-width: 100%;
+      }
+
+      .hero {
+        width: 100%;
+        height: 250px;
+        background-color: #673be6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+
+      .hero h1 {
+        color: #fff;
+        font-size: 2.5rem;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: 300px auto;
+        gap: 20px;
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+      }
+
+      aside ul li a {
+        text-decoration: none;
+        color: #162949;
+        display: block;
+        padding: 10px;
+        transition: color 0.3s, font-weight 0.3s;
+      }
+
+      aside ul li a:hover,
+      aside ul li a.active {
+        color: #673be6;
+        font-weight: 700;
+      }
+
+      main {
+        padding: 0 20px;
+        background: #fff;
+        border-radius: 8px;
+      }
+
+      button {
+        padding: 0 16px;
+        font-size: 14px;
+        font-weight: 400;
+        font-family: "Roboto", sans-serif;
+        color: #fff;
+        background-color: #005fed;
+        border-radius: 4px;
+        cursor: pointer;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 32px;
+      }
+
+      main > * {
+        display: none;
+      }
+
+      main section:first-child {
+        display: block;
+      }
+
+      main pre {
+        background-color: #f4f4f4;
+        padding: 16px;
+        border-radius: 4px;
+        white-space: pre-line;
+      }
+
+      .faq-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .faq {
+        background: #f4f4f4;
+        padding: 20px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        transition: all 0.3s ease;
+      }
+
+      .faq:hover {
+        border-color: #673be6;
+      }
+
+      .faq h3 {
+        margin: 0;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .faq .faq-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+
+      .faq.open .faq-content {
+        max-height: 200px; /* Adjust based on content */
+      }
+
+      .faq-content p {
+        margin: 10px 0 0 0;
+      }
+
+      .faq-toggle {
+        background: none;
+        border: none;
+        font-size: 1.2em;
+        cursor: pointer;
+        color: #673be6;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero">
+      <h1>KwetuPOS Product Documentation</h1>
+    </div>
+
+    <div class="grid-container">
+      <aside>
+        <ul>
+          <li>
+            <a href="#" data-target="getting-started" class="active"
+              >Getting Started</a
+            >
+          </li>
+          <li>
+            <a href="#" data-target="product-specifications"
+              >Product Specifications</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              data-target="installation-and-configuration-instructions"
+              >Installation and Configuration Instructions</a
+            >
+          </li>
+          <li>
+            <a href="#" data-target="server-requirements"
+              >Server Requirements</a
+            >
+          </li>
+          <li>
+            <a href="#" data-target="troubleshooting-tips"
+              >Troubleshooting Tips</a
+            >
+          </li>
+          <li><a href="#" data-target="faqs">FAQs</a></li>
+          <li><a href="#" data-target="regular-updates">Regular Updates</a></li>
+        </ul>
+      </aside>
+
+      <main>
+        <section id="getting-started">
+          <h2>Getting Started</h2>
+          <p>
+            Welcome to our product documentation. This documentation provides
+            detailed information about the product's features and
+            functionalities, along with installation and setup instructions to
+            help you get started quickly.
+          </p>
+          <p>
+            Our product is a robust and modular front-end application designed
+            to provide an intuitive and efficient user experience. We utilize a
+            wide range of UI components, from buttons and dropdown menus to
+            modals and tables, ensuring you have all the necessary tools to
+            build modern and responsive applications.
+          </p>
+          <p>
+            In addition to UI components, our application includes various
+            pre-built views and pages such as product listings for e-commerce, a
+            file manager, email system, Kanban boards, and more. Each of these
+            modules has been carefully crafted to be easily integrated and
+            customized according to your project's needs.
+          </p>
+          <p>
+            We hope this documentation proves useful and provides all the
+            necessary information for you to explore and make the most of our
+            product. If you have any questions or issues, please refer to the
+            <strong>FAQs</strong> and
+            <strong>Troubleshooting Tips</strong> sections for additional
+            support.
+          </p>
+        </section>
+
+        <section id="product-specifications">
+          <h2>Product Specifications</h2>
+          <p>
+            This product includes a variety of components and pages that can be
+            used to build a complete application:
+          </p>
+
+          <h3>Base UI Components</h3>
+          <ul>
+            <li><strong>Button</strong>: Interactive button for actions.</li>
+            <li><strong>ButtonGroup</strong>: Grouping of buttons.</li>
+            <li><strong>Checkbox</strong>: Checkboxes for selection.</li>
+            <li>
+              <strong>Comment</strong>: Component for displaying comments.
+            </li>
+            <li><strong>Dropdown</strong>: Dropdown menu.</li>
+            <li><strong>InlineEdit</strong>: Inline text editing.</li>
+            <li><strong>Input</strong>: Text input field.</li>
+            <li><strong>Label</strong>: Label for form components.</li>
+            <li><strong>LineItem</strong>: Line item.</li>
+            <li><strong>ListGroup</strong>: List group.</li>
+            <li><strong>Lozenge</strong>: Visual tag.</li>
+            <li><strong>Modal</strong>: Modal window.</li>
+            <li><strong>Pagination</strong>: Pagination for lists.</li>
+            <li><strong>Progress</strong>: Progress bar.</li>
+            <li><strong>Radio</strong>: Radio button.</li>
+            <li><strong>Switch</strong>: Toggle button.</li>
+            <li><strong>Table</strong>: Data table.</li>
+            <li><strong>Tabs</strong>: Navigation tabs.</li>
+            <li><strong>Tooltip</strong>: Tooltip.</li>
+          </ul>
+
+          <h3>Views and Pages</h3>
+          <ul>
+            <li>
+              <strong>E-commerce</strong>:
+              <ul>
+                <li>Product Listing</li>
+                <li>Product Detail</li>
+                <li>Cart</li>
+                <li>Checkout</li>
+                <li>Orders</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Email</strong>:
+              <ul>
+                <li>Inbox</li>
+                <li>Compose</li>
+                <li>Read Email</li>
+              </ul>
+            </li>
+            <li><strong>File Manager</strong></li>
+            <li><strong>Kanban Boards</strong></li>
+            <li><strong>Error Pages</strong>: 404, 500</li>
+            <li><strong>Profile</strong></li>
+            <li>
+              <strong>Projects</strong>:
+              <ul>
+                <li>Project Overview</li>
+                <li>Project List</li>
+                <li>Create Project</li>
+              </ul>
+            </li>
+            <li><strong>Starter Page</strong></li>
+          </ul>
+        </section>
+
+        <section id="installation-and-configuration-instructions">
+          <h2>Installation and Configuration Instructions</h2>
+
+          <h3>Installation Steps</h3>
+          <ol>
+            <li>
+              <strong>Download the product and extract the files</strong>:
+            </li>
+            <li>
+              <strong>Navigate to the project's root directory</strong>:
+              <pre><code>cd path/to/project</code></pre>
+            </li>
+            <li>
+              <strong>Install dependencies using npm or yarn</strong>:
+              <pre><code>npm install</code></pre>
+            </li>
+          </ol>
+
+          <h3>Environment Configuration</h3>
+          <p>
+            Create a <code>.env</code> file in the project's root and configure
+            the environment variables as needed:
+          </p>
+          <pre><code>REACT_APP_API_URL=https://api.example.com
+            NODE_ENV=development</code></pre>
+
+          <h3>Starting the Development Server</h3>
+          <pre><code>npm start</code></pre>
+          <p>
+            The development server will be available at
+            <code>http://localhost:3000</code>.
+          </p>
+        </section>
+
+        <section id="server-requirements">
+          <h3>Server Requirements</h3>
+          <p>
+            It's essential to have these versions of Node.js and npm installed
+            to ensure full compatibility with project dependencies and scripts,
+            providing a stable development environment and avoiding errors
+            related to library and package versions.
+          </p>
+          <ul>
+            <li><strong>Node.js</strong> version >= 16.18.1</li>
+            <li><strong>npm</strong> version >= 8.19.2</li>
+          </ul>
+        </section>
+
+        <section id="troubleshooting-tips">
+          <h2>Troubleshooting Tips</h2>
+          <div class="faq-container">
+            <div class="faq">
+              <h3>
+                Problem: Error during dependency installation
+                <button class="faq-toggle">+</button>
+              </h3>
+              <div class="faq-content">
+                <p>
+                  <strong>Solution</strong>: Ensure you are using the correct
+                  version of Node.js and npm. Use <code>nvm</code> to manage
+                  multiple Node.js versions if needed.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq">
+              <h3>
+                Problem: Blank page after starting the server
+                <button class="faq-toggle">+</button>
+              </h3>
+              <div class="faq-content">
+                <p>
+                  <strong>Solution</strong>: Check the browser console for error
+                  messages. Ensure all dependencies are properly installed and
+                  the development server is running without errors.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq">
+              <h3>
+                Problem: Components' styles are not being applied
+                <button class="faq-toggle">+</button>
+              </h3>
+              <div class="faq-content">
+                <p>
+                  <strong>Solution</strong>: Check if the
+                  <code>.scss</code> files are correctly imported in the
+                  components. Ensure Webpack (or another build tool) is
+                  configured to process SCSS files.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq">
+              <h3>
+                Problem: API calls are not working
+                <button class="faq-toggle">+</button>
+              </h3>
+              <div class="faq-content">
+                <p>
+                  <strong>Solution</strong>: Check CORS settings on the backend.
+                  Ensure API URLs are correct and the backend server is running.
+                  Use tools like Postman to test APIs directly.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq">
+              <h3>
+                Problem: Components are not rendering correctly
+                <button class="faq-toggle">+</button>
+              </h3>
+              <div class="faq-content">
+                <p>
+                  <strong>Solution</strong>: Check for errors in the browser
+                  console. Ensure all dependencies and imports are correct. Use
+                  React DevTools to inspect the component tree, state, and
+                  props.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="faqs">
+          <h2>FAQs</h2>
+          <div class="faq-container">
+            <div class="faq">
+              <h3>
+                Question: How can I add a new UI component?
+                <button class="faq-toggle">+</button>
+              </h3>
+              <div class="faq-content">
+                <p>
+                  <strong>Answer</strong>: To add a new UI component, create a
+                  new directory for the component under
+                  <code>src/components/BaseUI/</code>. Add the necessary
+                  <code>.jsx</code> and <code>.scss</code> files and import the
+                  component in the main components file.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq">
+              <h3>
+                Question: Can I use this project with another backend?
+                <button class="faq-toggle">+</button>
+              </h3>
+              <div class="faq-content">
+                <p>
+                  <strong>Answer</strong>: Yes, the frontend is independent of
+                  the backend. You can create an <code>api.js</code> file and
+                  configure API calls to communicate with any backend.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq">
+              <h3>
+                Question: How can I modify a component's style?
+                <button class="faq-toggle">+</button>
+              </h3>
+              <div class="faq-content">
+                <p>
+                  <strong>Answer</strong>: Component styles are defined in
+                  <code>.scss</code> files located in the same folder as the
+                  components. Edit these files to customize styles.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq">
+              <h3>
+                Question: How to manage user authentication?
+                <button class="faq-toggle">+</button>
+              </h3>
+              <div class="faq-content">
+                <p>
+                  <strong>Answer</strong>: User authentication can be managed
+                  using libraries like <code>jsonwebtoken</code> for token-based
+                  authentication. Integrate authentication on the frontend
+                  through secure API calls to the backend that verifies tokens.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq">
+              <h3>
+                Question: How can I implement automated tests?
+                <button class="faq-toggle">+</button>
+              </h3>
+              <div class="faq-content">
+                <p>
+                  <strong>Answer</strong>: Use libraries like
+                  <code>Jest</code> and <code>React Testing Library</code> to
+                  create unit and integration tests for your components and
+                  pages. Configure test scripts in <code>package.json</code> to
+                  facilitate test execution.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="regular-updates">
+          <h2>Regular Updates</h2>
+          <p>
+            Our team is constantly working to improve the KwetuPOS product by
+            implementing new features and enhancing user experience.
+          </p>
+          <p>
+            Stay updated with our ongoing changes and make the most of the
+            latest KwetuPOS functionalities. If you have feedback or
+            suggestions, feel free to contact us through our support channels.
+          </p>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const links = document.querySelectorAll("aside ul li a");
+        const sections = document.querySelectorAll("main > section");
+        const faqs = document.querySelectorAll(".faq h3");
+
+        links.forEach((link) => {
+          link.addEventListener("click", function (event) {
+            event.preventDefault();
+            const targetId = this.getAttribute("data-target");
+
+            links.forEach((link) => {
+              link.classList.remove("active");
+            });
+
+            sections.forEach((section) => {
+              section.style.display = "none";
+            });
+
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+              targetElement.style.display = "block";
+              this.classList.add("active");
+            }
+          });
+        });
+
+        faqs.forEach((faq) => {
+          faq.addEventListener("click", function () {
+            const parent = this.parentNode;
+            parent.classList.toggle("open");
+            const content = parent.querySelector(".faq-content");
+            const toggleButton = parent.querySelector(".faq-toggle");
+            toggleButton.textContent = parent.classList.contains("open")
+              ? "−"
+              : "+";
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

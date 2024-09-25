@@ -1,0 +1,107 @@
+.dropdown-menu-container {
+    position: relative;
+
+    &__header {
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        -webkit-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
+
+        &:hover {
+            background-color: #eceff1;
+        }
+
+        span {
+            font-size: var(--ct-icon-size);
+            color: var(--ct-icon-color);
+        }
+    }
+
+    &__content {
+        min-width: 10rem;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
+        height: fit-content;
+        font-size: 0.9rem;
+        color: #212529;
+        border-radius: var(--border-radius);
+        box-shadow: var(--ct-shadow-dropdown);
+        padding: 0.2rem 0;
+        background-color: #fff;
+        border: 1px solid #e7ebf0;
+        position: fixed;
+		z-index: 100;
+
+        transition: opacity .3s ease-in-out;
+       
+        opacity: 0;
+        visibility: hidden;
+
+        &--visible {
+           opacity: 1;
+           visibility: visible;
+        }
+
+        &__item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            padding: 0.5rem 1rem;
+            clear: both;
+            font-weight: 400;
+            color: #6c757d;
+            text-align: inherit;
+            text-decoration: none;
+            white-space: nowrap;
+            background-color: transparent;
+            border: 1px solid transparent;
+            cursor: pointer;
+
+            &:hover {
+                color: #1e2125;
+                background-color: #f6f7fb;
+            }
+
+            &--icon {
+                font-size: 22px;
+                display: flex;
+                align-items: center;
+            }
+        }
+        
+    }
+}
+
+[data-theme="dark"] {
+    .dropdown-menu-container {
+        &__header {
+            &:hover {
+                background-color: var(--ct-dropdown-hover-dark);
+            }
+        }
+
+        &__content {
+            background-color: var(--ct-sidebar-background-dark);
+            border-color: rgba(255, 255, 255, .3);
+
+            &__item {
+                color: #bfc1ce;
+
+                &:hover {
+                    background-color: var(--ct-dropdown-hover-dark);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,86 @@
+.project-grid-container {
+    background-color: #fff;
+    position: relative;
+    padding: 16px;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &--tag {
+            width: -webkit-fit-content;
+            width: -moz-fit-content;
+            width: fit-content;
+            border-radius: 4px;
+            padding: 0 6px;
+            color: #fff;
+            font-size: 12px;
+
+            &--ongoing {
+                background-color: var(--warning-200);
+                color: #172B4D;
+            }
+
+            &--not-started {
+                background-color: var(--neutral-500);
+            }
+
+            &--delayed {
+                background-color: var(--danger-500);
+            }
+
+            &--completed {
+                background-color: var(--success-300);
+            }
+        }
+    }
+
+    &__content {
+        margin-top: 24px;
+
+        &--title {
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        &--description {
+            font-size: 12px;
+            margin-top: 8px;
+        }
+
+        &--progress {
+            margin: 16px 0;
+        }
+
+        &--footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 16px;
+
+            &--deadline {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                
+                svg {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+[data-theme="dark"] {
+    .project-grid-container {
+        background-color: var(--ct-background-card-dark);
+        box-shadow: unset;
+        color: var(--ct-white-dark);
+    }
+}

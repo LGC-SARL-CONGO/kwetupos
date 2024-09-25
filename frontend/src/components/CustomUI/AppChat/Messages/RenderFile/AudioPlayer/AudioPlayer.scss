@@ -1,0 +1,97 @@
+.audio-player-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &__buttons {
+        width: 30px;
+        height: 30px;
+        
+        svg {
+            color: var(--primary);
+            font-size: 30px;
+            cursor: pointer;
+        }
+    }
+
+    &__progress {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+             appearance: none; 
+        width: 100%;
+        cursor: pointer;
+        outline: none;
+        border-radius: 15px;
+        height: 3px;
+        background: rgba(var(--primary-rgb), .2);
+        max-width: 120px;
+
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none; 
+            height: 10px;
+            width: 10px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            border: none;
+            -webkit-transition: .2s ease-in-out;
+            transition: .2s ease-in-out;
+        }
+        
+        &::-moz-range-thumb {
+            height: 10px;
+            width: 10px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            border: none;
+            -moz-transition: .2s ease-in-out;
+            transition: .2s ease-in-out;
+        }
+          
+        &::-webkit-slider-thumb:hover {
+            box-shadow: 0 0 0 8px rgba(var(--primary-rgb), .1)
+        }
+    
+        &:active::-webkit-slider-thumb {
+            box-shadow: 0 0 0 8px rgba(var(--primary-rgb), .2)
+        }
+    
+        &:focus::-webkit-slider-thumb {
+            box-shadow: 0 0 0 8px rgba(var(--primary-rgb), .2)
+        }
+          
+        &::-moz-range-thumb:hover {
+            box-shadow: 0 0 0 8px rgba(var(--primary-rgb), .1)
+        }
+    
+        &:active::-moz-range-thumb {
+            box-shadow: 0 0 0 8px rgba(var(--primary-rgb), .2)
+        }
+    
+        &:focus::-moz-range-thumb {
+            box-shadow: 0 0 0 8px rgba(var(--primary-rgb), .2)    
+        }     
+    }
+
+    &__progress-inner {
+        height: 3px;
+        background-color: var(--primary);
+        position: absolute;
+        top: 0;
+    }
+
+    &__duration {
+        position: relative;
+        width: 23%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        span {
+            position: absolute;
+            width: 100%;
+            font-size: 12px;
+        }
+    }
+      
+}

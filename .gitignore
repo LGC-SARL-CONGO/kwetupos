@@ -1,0 +1,57 @@
+# Ignorer le dossier backend
+/backend/node_modules/
+/backend/public/hot
+/backend/public/storage
+/backend/storage/*.key
+/backend/storage/
+/backend/vendor
+/backend/.idea
+/backend/.vagrant
+Homestead.json
+Homestead.yaml
+npm-debug.log
+.env
+/backend/public/uploads/business_logos
+/backend/public/uploads/documents
+/backend/public/uploads/img
+/backend/public/uploads/media
+/backend/public/uploads/invoice_logos
+/backend/public/uploads/UltimatePOS
+/backend/public/uploads/temp
+/backend/public/css/
+/backend/public/fonts/
+/backend/public/images/
+/backend/public/modules/
+/backend/public/mix-manifest.json
+/backend.scribe
+/backend/public/docs
+/backend/public/js/skins/
+/backend/public/js/icons/
+/backend/.history
+.history
+
+# Ignorer le dossier frontend
+/frontend/node_modules/
+/frontend/build/
+/frontend/dist/
+/frontend/.env
+/frontend/npm-debug.log*
+/frontend/yarn-debug.log*
+/frontend/yarn-error.log*
+/frontend/coverage/
+/frontend/.eslintcache
+/frontend/.history
+
+# Ignorer les fichiers temporaires
+*.tmp
+*.temp
+
+# Ignorer les fichiers spécifiques aux éditeurs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Fichiers système
+.DS_Store
+Thumbs.db

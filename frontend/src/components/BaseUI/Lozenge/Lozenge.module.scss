@@ -1,0 +1,126 @@
+.lozenge-container {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    position: relative;
+    padding: 0 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+
+    &--bold {
+        font-weight: bold;
+    }
+
+    &--upper {
+        text-transform: uppercase;
+    }
+
+    &--default {
+        background-color: var(--neutral);
+        color: #fff;
+    }
+
+    &--default-subtle {
+        background-color: var(--neutral-75);
+        color: var(--text);
+    }
+
+    &--info {
+        background-color: var(--primary);
+        color: #fff;
+    }
+
+    &--info-subtle {
+        background-color: var(--primary-50);
+        color: #0050C9;
+    }
+
+    &--success {
+        background-color: var(--success);
+        color: #fff;
+    }
+
+    &--success-subtle {
+        background-color: var(--success-50);
+        color: #2B9166;
+    }
+
+    &--warning {
+        background-color: var(--warning);
+        color: var(--text);
+    }
+
+    &--warning-subtle {
+        background-color: var(--warning-50);
+        color: #6B5406;
+    }
+
+    &--danger {
+        background-color: var(--danger);
+        color: #fff;
+    }
+
+    &--danger-subtle {
+        background-color: var(--danger-50);
+        color: #AD2E18;
+    }
+}
+
+[data-theme="dark"] {
+    .lozenge-container {
+        &--default {
+            background-color: var(--neutral);
+            color: #fff;
+        }
+    
+        &--default-subtle {
+            background-color: #323d4b;
+            color: #A0ADBB;
+        }
+    
+        &--info {
+            background-color: var(--primary);
+            color: #fff;
+        }
+    
+        &--info-subtle {
+            background-color: #323d4b;
+            color: #85b8ff;        
+        }
+    
+        &--success {
+            background-color: var(--success);
+            color: #fff;
+        }
+    
+        &--success-subtle {
+            background-color: #323d4b;
+            color: #00ff94; 
+        }
+    
+        &--warning {
+            background-color: var(--warning);
+            color: #162949;
+        }
+    
+        &--warning-subtle {
+            background-color: #323d4b;
+            color: #F4C731;
+        }
+    
+        &--danger {
+            background-color: var(--danger);
+            color: #fff;
+        }
+    
+        &--danger-subtle {
+            background-color: #323d4b;
+            color: #FC7E75;
+        }
+    }    
+}

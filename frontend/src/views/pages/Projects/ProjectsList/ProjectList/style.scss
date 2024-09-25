@@ -1,0 +1,13 @@
+.project-list-container {
+    background-color: #fff;
+    position: relative;
+    padding: 16px;
+}
+
+[data-theme="dark"] {
+    .project-list-container {
+        background-color: var(--ct-background-card-dark);
+        box-shadow: unset;
+        color: var(--ct-white-dark);
+    }
+}

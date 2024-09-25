@@ -1,0 +1,76 @@
+.account-settings-container {
+    width: 100%;
+    position: relative;
+
+    // sidebar component style
+    &__sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        box-shadow: var(--ct-shadow-dropdown);
+        padding: 16px 0;
+        background-color: #fff;
+        // border: 1px solid var(--neutral-100);
+        
+        &__item {
+            padding: 10px 16px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: var(--neutral-50);
+            }
+
+            svg {
+                font-size: 20px;
+            }
+
+            &--active {
+                background-color: #f4f7ff;
+
+                &::before {
+                    content: '';
+                    width: 3px;
+                    height: 100%;
+                    background-color: #4a58ec;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+
+                > * {
+                    color: #4a58ec;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    // basic-information component style
+    &__basic-information {
+        box-shadow: var(--ct-shadow-dropdown);
+        padding: 16px;
+        background-color: #fff;
+
+        &--picture {
+            width: 100%;
+            height: 100px;
+            position: relative;
+            margin-bottom: 50px;
+            border-radius: 4px;
+            background-image: url('../../../assets//extras//background.png');
+            background-repeat: no-repeat;
+            background-position: top;
+            background-size: cover;
+
+            &--avatar {
+                position: absolute;
+                bottom: -30px;
+                left: 30px;
+            }
+        }
+    }
+}

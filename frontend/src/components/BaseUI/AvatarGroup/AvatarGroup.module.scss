@@ -1,0 +1,101 @@
+.avatar-group-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 12px;
+    cursor: default;
+
+    &__item {
+        display: flex;
+        gap: 10px;
+
+        &--sup {
+            > div {
+                margin-left: -16px;
+            }
+            
+            &:hover {
+                position: relative;
+                transform: translateY(-1px);
+                z-index: 2;
+            }
+
+        }
+
+        .hidden-users {
+            background-color: var(--neutral-75);
+            height: 2.2rem;
+            width: 2.2rem;
+            border-radius: 50%;
+            vertical-align: middle;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 450;
+            border: 2px solid #fff;
+            margin-left: -16px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        &--content {
+            max-height: 250px;
+            overflow-y: auto;
+        }
+
+        &.appearance-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            .avatar-group-container__item--sup {
+                > div {
+                    margin-left: 0;
+                }
+                
+                &:hover {
+                    position: relative;
+                    transform: unset;
+                    z-index: unset;
+                }
+    
+            }
+
+            .hidden-users {
+                margin-left: unset;
+
+                &__default {
+                    width: 34px;
+                    height: 34px;
+                }
+            
+                &__small {
+                    width: 24px;
+                    height: 24px;
+                }
+            
+                &__medium {
+                    width: 34px;
+                    height: 34px;
+                }
+                
+                &__large {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        } 
+
+    }
+
+}
+
+[data-theme="dark"] {
+    .avatar-group-container {
+        &__item {
+            .hidden-users {
+                background-color: rgba($color: #fff, $alpha: .2);
+                color: var(--ct-title-color);
+            }
+        }
+    }
+}

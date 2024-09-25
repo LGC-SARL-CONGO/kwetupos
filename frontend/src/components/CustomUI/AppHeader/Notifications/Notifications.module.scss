@@ -1,0 +1,112 @@
+.notifications-container {
+    &__notification {
+        background-color: transparent;
+        padding: 0;
+        align-content: center;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
+        height: fit-content;
+        margin-top: 6px;
+        width: 20px;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px;
+
+        .title {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .link {
+            font-size: 12px;
+            color: var(--primary);
+            cursor: pointer;
+
+            &:hover {
+                color: darken($color: #4083f8, $amount: 15);
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        &__info {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 50px;
+
+            .user {
+                font-size: 13px;
+                color: #495057;
+                font-weight: 500;
+                margin-left: 10px;
+            }
+
+            .date {
+                font-size: 12px;
+                color: #74788D;
+            }
+        }
+
+        .subject {
+            font-size: 12px;
+            color: #74788D;
+            max-width: 250px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding-left: 40px;
+            margin-top: -7px;
+        }
+    }
+}
+
+[data-theme="dark"] {
+    .notifications-container {
+        &__header {
+            .title {
+                color: var(--ct-title-color);
+            }
+        }
+
+        &__content {
+            &__info {
+                .user {
+                    color: rgba(var(--white-rgb), .7);
+                }
+
+                .date {
+                    color: rgba(var(--white-rgb), .6);
+                }
+            }
+
+            .subject {
+                color: rgba(var(--white-rgb), .6);
+            }
+        }
+    }
+}
+
+@media (max-width: 767.88px) {
+    .notifications-container {
+        .custom__content {
+            position: fixed;
+            top: 50px;
+            transform: unset;
+            left: 0;
+            right: 0;
+            margin: 20px 16px 0 16px;
+            height: -webkit-max-content;
+            height: -moz-max-content;
+            height: max-content;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.app-chart-container {
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    padding: 0 0 8px 0;
+
+    &__header {
+        padding: 8px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .title {
+            font-weight: 500;
+            font-size: 14px;
+            display: flex;
+        }
+
+        .filter__dropdown {
+            border: 1px solid var(--gray-300);
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 3px 10px;
+            cursor: pointer;
+            font-size: 12px;
+
+            svg {
+                font-size: 18px;
+            }
+
+        }
+    }
+}
+
+[data-theme="dark"] {
+    .app-chart-container {
+        background-color: var(--ct-background-card-dark);
+
+        &__header {
+            .title {
+                color: var(--ct-title-color);
+            }
+            .filter__dropdown {
+                border-color: var(--ct-border-color-dark);
+                color: #a6b0cf;
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Redirection vers le dossier public
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+
+# Activation du module expires pour la gestion du cache
+<IfModule mod_expires.c>
+    ExpiresActive On
+    
+    # Durées de cache pour les différents types de fichiers
+    ExpiresByType text/css "access plus 1 hour"
+    ExpiresByType application/javascript "access plus 1 hour"
+    ExpiresByType image/jpeg "access plus 24 hours"
+    ExpiresByType image/png "access plus 24 hours"
+    ExpiresByType image/gif "access plus 24 hours"
+    ExpiresByType image/webp "access plus 24 hours"
+</IfModule>
+
+# En-têtes pour contrôler le cache dans les navigateurs
+<IfModule mod_headers.c>
+    <FilesMatch "\.(css|js|jpeg|jpg|png|gif|webp)$">
+        Header set Cache-Control "max-age=3600, public"
+    </FilesMatch>
+</IfModule>
