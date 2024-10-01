@@ -78,19 +78,19 @@ export default function User() {
       filter: { type: "text", label: translate("UI.FULL_NAME"), options: [] },
     },
     {
-      name: translate("ROLE"),
+      name: translate("User Role"),
       resizable: true,
       sort: true,
       filter: { type: "text", label: translate("UI.ROLE"), options: [] },
     },
     {
-      name: "Email",
+      name: translate("User Email"),
       resizable: true,
       sort: true,
-      filter: { type: "text", label: translate("EMAIL"), options: [] },
+      filter: { type: "text", label: translate("UI.EMAIL"), options: [] },
     },
     {
-      name: translate("ACTION"),
+      name: translate("Action"),
       resizable: true,
       sort: false,
       filter: { type: "text", label: translate("UI.ACTION"), options: [] },
@@ -150,7 +150,6 @@ export default function User() {
         </Button>
       }
     >
-      <h1 className="text-black">sdsdadasssssssss</h1>
       <Container>
         <ContainerItem sm={4} md={8} xl={12}>
           <Table
@@ -205,7 +204,6 @@ export default function User() {
       <ToastContainer>
         {toasts?.map((toast, index) => (
           <Toast
-            key={toast.id}
             {...toast}
             actions={[
               { content: "Dismiss", onClick: () => removeToast(index) },
