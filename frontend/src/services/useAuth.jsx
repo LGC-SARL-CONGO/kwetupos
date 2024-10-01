@@ -7,7 +7,7 @@ export const useAuth = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState(null); // État pour stocker les données utilisateur
   const { getStorage, persistStorage, clearStorage } = useLocalStorage();
-  const apiUrl = "https://app.kwetupos.com";
+  const apiUrl = process.env.REACT_APP_API_URL;
 
   // Fonction pour vérifier l'authentification
   const auth = useCallback(async () => {

@@ -101,7 +101,7 @@ export default function Roles() {
       <Container>
         <ContainerItem sm={4} md={8} xl={12}>
           <Table
-            title={translate("ECOMMERCE.USER_LIST")}
+            title={translate("All Users")}
             columns={headers}
             identifier="users_list"
             enableCheckbox={true}

@@ -66,7 +66,7 @@ export default function User() {
 
   const headers = [
     {
-      name: translate("UI.USER_NAME"),
+      name: translate("User Name"),
       resizable: true,
       sort: true,
       filter: { type: "text", label: translate("UI.USER_NAME"), options: [] },
@@ -78,19 +78,19 @@ export default function User() {
       filter: { type: "text", label: translate("UI.FULL_NAME"), options: [] },
     },
     {
-      name: translate("UI.ROLE"),
+      name: translate("ROLE"),
       resizable: true,
       sort: true,
       filter: { type: "text", label: translate("UI.ROLE"), options: [] },
     },
     {
-      name: translate("UI.EMAIL"),
+      name: "Email",
       resizable: true,
       sort: true,
-      filter: { type: "text", label: translate("UI.EMAIL"), options: [] },
+      filter: { type: "text", label: translate("EMAIL"), options: [] },
     },
     {
-      name: translate("UI.ACTION"),
+      name: translate("ACTION"),
       resizable: true,
       sort: false,
       filter: { type: "text", label: translate("UI.ACTION"), options: [] },
@@ -153,7 +153,7 @@ export default function User() {
       <Container>
         <ContainerItem sm={4} md={8} xl={12}>
           <Table
-            title={translate("ECOMMERCE.USER_LIST")}
+            title={translate("All Users")}
             columns={headers}
             identifier="users_list"
             enableCheckbox={true}
