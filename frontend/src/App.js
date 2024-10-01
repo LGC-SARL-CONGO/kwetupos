@@ -2,6 +2,9 @@ import React, { Suspense, useEffect } from "react";
 import { HashRouter, Route, Routes, Outlet, Navigate } from "react-router-dom";
 import moment from "moment";
 
+// Import the global styles
+import "./globale.css";
+
 import ThemeProvider from "./contexts/theme";
 import Login from "./views/auth/Login";
 import Register from "./views/auth/Register";

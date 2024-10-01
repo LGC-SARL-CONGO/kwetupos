@@ -150,6 +150,7 @@ export default function User() {
         </Button>
       }
     >
+      <h1 className="text-black">sdsdadasssssssss</h1>
       <Container>
         <ContainerItem sm={4} md={8} xl={12}>
           <Table
@@ -204,6 +205,7 @@ export default function User() {
       <ToastContainer>
         {toasts?.map((toast, index) => (
           <Toast
+            key={toast.id}
             {...toast}
             actions={[
               { content: "Dismiss", onClick: () => removeToast(index) },
