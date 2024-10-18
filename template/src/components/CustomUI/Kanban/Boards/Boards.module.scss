@@ -1,0 +1,177 @@
+.kanban-container {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    min-width: 100%;
+    padding-bottom: 40px;
+
+    &__section {
+        background-color: var(--white);
+        box-shadow: var(--box-shadow-card);
+        border-radius: var(--border-radius);
+        padding: 15px;
+        min-width: 290px;
+
+        &__header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 20px;
+
+            &--title {
+                font-size: 14px;
+                font-weight: 500;
+                color: var(--text);
+            }
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .content-item {
+                background-color: #f4f6fa;
+                padding: 12px;
+                border-radius: var(--border-radius);
+                cursor: move;
+
+                &__header {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+
+                    &--title {
+                        font-size: 14px;
+                        font-weight: 600;
+                        color: var(--dark);
+                    }
+
+                    &--delete {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 4px;
+                        cursor: pointer;
+
+                        svg {
+                            font-size: 20px;
+                            color: #929294;
+                        }
+
+                        &:hover {
+                            svg {
+                                color: var(--text);
+                            }
+                        }
+                    }
+                }
+
+                &__description {
+                    margin-top: 12px;
+                    font-size: 13px;
+                }
+    
+                .board-quantity {
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+    
+                    &__item {
+                        display: flex;
+                        align-items: center;
+                        gap: 4px;
+    
+                        &--icon {
+                            font-size: 18px;
+                            color: var(--text);
+                        }
+    
+                        &:first-child {
+                            .board-quantity__item--icon {
+                                transform: rotate(45deg);
+                            }
+                        }
+                    }
+    
+    
+                }
+            }
+
+            &--create {
+                background-color: #f4f6fa;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 8px 0;
+                border-radius: 4px;
+                cursor: pointer;
+
+                &--icon {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    &__create {
+        min-width: -webkit-fit-content;
+        min-width: -moz-fit-content;
+        min-width: fit-content;
+
+        &--icon {
+            font-size: 18px;
+        }
+    }
+}
+
+[data-theme="dark"] {
+    .kanban-container {
+        &__section {
+            background-color: var(--ct-background-card-dark);
+            box-shadow: unset;
+            color: var(--ct-title-color-dark);
+            border-color: transparent;
+            
+            &__header {
+                .title {
+                    color: var(--ct-title-color-dark);
+                }
+            }
+
+            &__content {
+                .content-item {
+                    background-color: #272a43;
+                    background-color: rgba($color: #47506b, $alpha: 0.4);
+                    color: var(--ct-white-dark);
+    
+                    .item__title {
+                        color: var(--ct-title-color-dark);
+                    }
+    
+                    
+                    &__header {
+                        &--title {
+                            color: var(--ct-sub-title-color-dark);
+                        }
+    
+                        &--delete {
+                            border-color: var(--ct-border-color-dark);
+                            color: #bfc1ce;
+                            
+                            &:hover {
+                                background-color: rgba($color: #5b6785, $alpha: 0.4);
+                            }
+                        }
+                    }
+                }
+
+                &--create {
+                    background-color: #353d53;
+                }
+            }
+        }
+    }
+}

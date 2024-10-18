@@ -1,0 +1,78 @@
+.dropzone-container {
+    width: 100%;
+
+    &__draggable {
+        height: 200px;
+        background-color: #fff;
+        border: 1.5px dashed var(--neutral-100);
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        gap: 4px;
+    
+        &--icon {
+            font-size: 40px;
+            color: var(--neutral-300);
+        }
+    
+        &--title {
+            font-weight: 500;
+        }
+    
+        &--or {
+            font-weight: 400;
+        }
+    
+        &--browser {
+            background-color: var(--neutral-50);
+            padding: 4px 16px;
+            border-radius: 4px;
+    
+            &:hover {
+                color: var(--primary);
+            }
+        }
+    }
+
+    &__files {
+        margin-top: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        &__file {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid var(--neutral-100);
+            padding: 8px;
+            border-radius: 4px;
+
+            &--image {
+                width: 25px;
+                height: 25px;
+            }
+
+            &--button {
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+
+                &:hover {
+                    background-color: var(--neutral-75);
+                }
+
+                svg {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

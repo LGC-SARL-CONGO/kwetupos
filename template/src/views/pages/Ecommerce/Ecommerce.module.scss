@@ -1,0 +1,73 @@
+.ecommerce-container {
+    .stroked__gauge {
+        box-shadow: var(--box-shadow);
+        margin-top: 16px;
+        .reset__shadow {
+            box-shadow: unset;
+        }
+        
+        &__legend {
+            background-color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 16px 16px;
+            
+            span {
+                font-size: 12px;
+            }
+
+            .legend__marker {
+                width: 8px;
+                height: 8px;
+                background-color: var(--success);
+                margin-right: 5px;
+
+                &--canceled {
+                    background-color: var(--danger);
+                }
+            }
+
+            .legend__quantity {
+                font-weight: 600;
+                font-size: 16px;
+            }
+        }
+    }
+
+    .revenue__by__channels {
+        padding: 0 16px 16px;
+        display: flex;
+        flex-direction: column;
+
+        .item {
+            display: flex;
+            flex-direction: column;
+
+            &__label {
+                font-weight: 400;
+                font-size: 13px;
+                color: var(--gray-500);
+            }
+
+            &__value {
+                font-weight: 600;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+[data-theme="dark"] {
+    .stroked__gauge {
+        &__legend {
+            background-color: var(--ct-background-card-dark) !important;
+            font-size: 80px;
+            color: var(--ct-sub-title-color);
+
+            .legend__quantity {
+                color: var(--ct-title-color);
+            }
+        }
+    }
+}

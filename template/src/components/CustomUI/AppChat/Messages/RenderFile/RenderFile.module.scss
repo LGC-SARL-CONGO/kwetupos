@@ -1,0 +1,45 @@
+.render__file__container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+ 
+    .file_info {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        .custom-view {
+            > div {
+                position: relative;
+            }
+        }
+
+        &:hover {
+            .download__file {
+                opacity: 1;
+            }
+        }
+
+        .download__file {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+            opacity: 0;
+            cursor: pointer;
+            transition: ease-in-out .3s;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: rgba(255, 255, 255, .7);
+            color: #232323;
+
+            svg {
+                font-size: 18px;
+            }
+        }
+    }
+}

@@ -1,0 +1,75 @@
+.list-user-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 16px;
+    height: 70px;
+    cursor: pointer;
+    position: relative;
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+
+        &--name {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        &--message {
+            font-size: 13px;
+            font-weight: 300;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 220px;
+        }
+
+        &--hour {
+            font-size: 11px;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+    }
+
+    &.selected,
+    &:hover {
+        background-color: var(--neutral-50);
+    }
+
+    &.dark {
+        border-color: var(--ct-border-color-dark);
+
+        
+        .user__info {
+            .name {
+                color: rgba(255, 255, 255, .8);
+            }
+
+            .message,
+            .hour {
+                color: rgba(255, 255, 255, .6);
+            }
+        }
+
+        .user__avatar {
+            .status {
+                border-color: rgba(255, 255, 255, .2);
+                &--online {
+                    background-color: #44d77f;
+                }
+    
+                &--offline {
+                    background-color: #a0a0a0;
+                }
+            }
+        }
+        
+        &.selected,
+        &:hover {
+            background-color: #353c50;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+.label-container {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    margin-bottom: 6px;
+    width: 100%;
+    position: relative;
+    color: rgb(98, 111, 134);
+
+    &--required {
+        color: var(--danger-400);
+        padding-left: 3px;
+    }
+}

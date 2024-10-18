@@ -1,0 +1,63 @@
+.banner-container {
+    width: 100%;
+    position: relative;
+
+    &__content {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        padding: 0.75rem;
+        font-size: 14px;
+        font-weight: 450;
+
+        &--default {
+            background-color: var(--neutral);
+            color: var(--white);
+        }
+
+        &--info {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        &--warning {
+            background-color: var(--warning);
+        }
+
+        &--danger {
+            background-color: var(--danger);
+            color: var(--white);
+        }
+
+        &--icon {
+            font-size: 22px;
+            display: flex;
+        }
+    }
+}
+
+[data-theme="dark"] {
+    .banner-container {
+        &__content {
+            &--default {
+                background-color: var(--neutral);
+                color: var(--white);
+            }
+    
+            &--info {
+                background-color: #5D9EF9;
+                color: #2D1F23;
+            }
+    
+            &--warning {
+                background-color: #F4C731;
+                color: #2D1F23;
+            }
+    
+            &--danger {
+                background-color: #F3766D;
+                color: #2D1F23;
+            }
+        }
+    }
+}

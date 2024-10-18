@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Instructions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .instruction-step {
+            margin-bottom: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .image {
+            width: 500px;
+            height: 250px;
+            margin-left: 20px;
+        }
+
+        image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <h1>Product Instructions</h1>
+    
+    <h2>Introduction</h2>
+    <p>Welcome to the product instructions. This guide will help you install, edit, and update the template. Follow the steps below for a smooth experience.</p>
+    
+    <h2>1. Installation</h2>
+    <div class="instruction-step">
+        <p>Follow these steps to install the product:</p>
+        <ol>
+            <li>Download the package from the provided link.</li>
+            <li>Extract the contents of the zip file to your desired location.</li>
+            <li>Open a terminal and navigate to the extracted directory.</li>
+            <li>Run the following command to install dependencies:</li>
+            <pre><code>npm install</code></pre>
+        </ol>
+        <div class="image">
+            <img src="./images/installation.jpg" alt="Installation Steps">
+        </div>
+    </div>
+    
+    <h2>2. Editing the Template</h2>
+    <div class="instruction-step">
+        <p>To edit the template, follow these steps:</p>
+        <ol>
+            <li>Open the project in your preferred code editor.</li>
+            <li>Navigate to the <code>src</code> directory to find the main files.</li>
+            <li>Make your desired changes in the relevant files. For example, to update the accordion component, edit <code>src/components/BaseUI/Accordion/index.jsx</code> or <code>src/components/BaseUI/Accordion/Accordion.module.scss</code></li>
+        </ol>
+        <div class="image">
+            <img src="images/editing-template.jpg" alt="Editing the Template">
+        </div>
+    </div>
+    
+    <h2>3. Updating the Template</h2>
+    <div class="instruction-step">
+        <p>To update the template, follow these steps:</p>
+        <ol>
+            <li>Ensure you have the latest version of the dependencies by running:</li>
+            <pre><code>npm update</code></pre>
+            <li>Make any necessary changes to your custom files.</li>
+            <li>Test the changes locally by running:</li>
+            <pre><code>npm start</code></pre>
+            <li>Once satisfied, build the project and deploy the updated model on your server.</li>
+        </ol>
+        <img src="images/build.jpg" alt="Building the Template">
+    </div>
+    
+    <h2>Additional Information</h2>
+    <p>For more details, refer to the <a href="doc.html">complete documentation</a>.</p>
+</body>
+</html>

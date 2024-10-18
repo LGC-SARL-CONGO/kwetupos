@@ -1,0 +1,82 @@
+.vector__map {
+    height: 300px;
+    width: 600px;
+    padding: 0 20px;
+}
+
+.marketing__goal {
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+
+    .reset__shadow {
+        box-shadow: unset;
+    }
+    
+    &__footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 0 16px 16px;
+        background-color: var(--white);
+
+        .info {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+
+            &__label {
+                color: #7e828d;
+                font-size: 12px;
+                margin-left: 5px;
+                font-weight: 500;
+                white-space: nowrap;
+            }
+
+            &__value {
+                color: #313877;
+                font-weight: 600;
+                font-size: 13px;
+                line-height: 23px;
+            }
+        }
+    }
+}
+
+.sales__by__country {
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    margin-top: 16px;
+
+    .reset__shadow{
+        box-shadow: unset;
+    }
+
+    .list__items {
+        padding: 8px 16px;
+        border-left: 1px solid var(--gray-200)
+    }
+}
+
+[data-theme='dark'] {
+    .sales__by__country {
+        background-color: var(--ct-background-card-dark);
+        color: var(--ct-sub-title-color);
+
+        .list__items {
+            border-color: var(--ct-border-color-dark);
+        }
+    }
+
+    .marketing__goal__footer {
+        background-color: var(--ct-background-card-dark);
+
+        .info__label {
+            color: var(--text);
+        }
+
+        .info__value {
+            color: var(--ct-title-color);
+        }
+    }
+}

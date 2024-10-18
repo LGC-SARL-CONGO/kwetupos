@@ -1,0 +1,13 @@
+.app-footer-container {
+    background-color: var(--white);
+    box-shadow: var(--box-shadow-card);
+    padding: 20px;
+}
+
+[data-theme="dark"] {
+    .app-footer-container {
+        background-color: var(--ct-background-dark);
+        color: rgba(255, 255, 255, .9);
+        box-shadow: var(--box-shadow-dark);
+    }
+}

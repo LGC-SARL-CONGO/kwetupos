@@ -1,0 +1,326 @@
+.button-container {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &__block {
+        width: 100%;
+        display: block;
+
+        .button-container__button {
+            display: block;
+            width: 100%;         
+            
+            .button-title {
+                justify-content: center;
+            }
+        }
+
+    }
+    
+    &__button {
+        padding: 0 16px;
+        font-size: 14px;
+        font-weight: 400;
+        font-family: 'Roboto';
+        color: var(--ds-text);
+        background-color: transparent;
+        border-radius: var(--border-radius);
+        text-decoration: none;
+        cursor: pointer;
+        border: 1.5px solid transparent;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        position: relative;
+        transition: 0.2s ease-in-out;
+        -webkit-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
+
+
+        &.button-text {
+            &--default {
+                height: 2.3744rem;
+
+                .use-icon {
+                    font-size: 18px;
+                }
+            }
+            
+            &--small {
+                height: 32px;
+
+                .use-icon {
+                    font-size: 16px;
+                }
+            }
+    
+            &--medium {
+                height: 42px;
+
+                .use-icon {
+                    font-size: 20px;
+                }
+            }
+    
+            &--large {
+                height: 52px;
+
+                .use-icon {
+                    font-size: 24px;
+                }
+            }
+        }
+
+        &.button-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            &--circle {
+                border-radius: 50%;
+            }
+
+            &--square {
+                border-radius: 4px;
+            }
+
+            &--default {
+                width: 2.3744rem;
+                height: 2.3744rem;
+                font-size: 18px;
+            }
+            
+            &--small {
+                width: 32px;
+                height: 32px;
+                font-size: 16px;
+            }
+    
+            &--medium {
+                width: 42px;
+                height: 42px;
+                font-size: 20px;
+            }
+    
+            &--large {
+                width: 52px;
+                height: 52px;
+                font-size: 24px;
+            }
+        }
+
+        .button-title {
+            display: flex;
+        }
+
+        &.default {
+            background-color: #f1f2f4;
+
+            &:hover {
+                background-color: var(--neutral-75);
+            }
+
+            &:active {
+                background-color: var(--neutral-100);
+            }
+        }
+
+        &.primary {
+            background-color: var(--primary);
+
+            .button-title {
+                display: flex;
+                gap: 5px;
+                color: var(--white);
+            }
+
+            .use-icon {
+                color: var(--white);
+            }
+
+            &:hover {
+                background-color: var(--primary-hovered)
+            }
+
+            &:active {
+                background-color: var(--primary-pressed);
+            }
+
+            @extend .disabled-default;
+        } 
+
+        &.warning {
+            background-color: var(--warning);
+
+            .button-title {
+                display: flex;
+                gap: 5px;
+                color: var(--black);
+            }
+
+            .use-icon {
+                color: var(--white);
+            }
+
+            &:hover {
+                background-color: var(--warning-hovered)
+            }
+
+            &:active {
+                background-color: var(--warning-pressed);
+            }
+
+            @extend .disabled-default;
+        } 
+
+        &.danger {
+            background-color: var(--danger);
+
+            .button-title {
+                display: flex;
+                gap: 5px;
+                color: var(--white);
+            }
+
+            .use-icon {
+                color: var(--white);
+            }
+
+            &:hover {
+                background-color: var(--danger-hovered)
+            }
+
+            &:active {
+                background-color: var(--danger-pressed);
+            }
+        } 
+
+        &.soft {
+            color: var(--text);
+
+            &:hover {
+                background-color: #f1f2f4;
+            }
+
+            &:active {
+                background-color: var(--neutral-100);
+            }
+        }
+
+        &.link {
+            color: var(--primary);
+            
+            &:hover {
+                text-decoration: underline;
+                color: var(--primary-hovered)
+            }
+
+            &:active {
+                color: var(--primary-pressed);
+            }
+        }
+
+        &.soft-link {
+            color: #44546f;
+            
+            &:hover {
+                text-decoration: underline !important;
+            }
+        }
+    }
+}
+
+.disabled-default {
+    &:disabled {
+        cursor: pointer;
+        pointer-events: none;
+        background-color: #e3e3e1 !important;
+        
+        * {
+            color: #929292 !important;
+        }
+    }
+}
+
+.disabled-outline {
+    &:disabled {
+        cursor: pointer;
+        pointer-events: none;
+        border-color: #e3e3e1 !important;
+        
+        * {
+            color: #929292 !important;
+        }
+    }
+}
+
+[data-theme="dark"] {
+    .button-container {
+        &__button {
+            &.default {
+                background-color: rgba($color: #fff, $alpha: .07);
+                .button-title {
+                    color: var(--text);
+                }
+            }
+
+            &.primary {
+                color: #2D1F23;
+
+                .button-title,
+                .use-icon {
+                    color: #2D1F23;
+                }
+
+                &:hover {
+                    background-color: #4590F8;
+                }
+            }
+
+            &.warning {
+                color: #2D1F23;
+
+                .button-title,
+                .use-icon {
+                    color: #2D1F23;
+                }
+            }
+            
+            &.danger {
+                color: #2D1F23;
+
+                .button-title,
+                .use-icon {
+                    color: #2D1F23;
+                }
+            }
+
+            &.soft {
+                &:hover {
+                    background-color: rgba($color: #fff, $alpha: .1);
+                }
+            }
+
+            &.soft-link {
+                color: var(--text);
+
+                .button-title {
+                    color: var(--text);
+                }
+            }
+
+            &.link {
+                &:hover {
+                    color: #2D82F7;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,97 @@
+.inline-edit-container {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    min-width: 200px;
+    max-width: 100%;
+    position: relative;
+
+    &__reading {
+        width: 100%;
+        height: auto;
+        padding: 12px;
+        border-radius: var(--border-radius);
+        cursor: text;
+        border: 1.5px solid transparent;
+
+        &:hover {
+            background-color: var(--neutral-50);
+        }
+    }
+
+    &__editing {
+        width: 100%;
+        height: auto;
+        padding: 12px;
+        border-radius: var(--border-radius);
+        border: 1.5px solid var(--primary);
+        outline: none;
+
+        &:focus {
+            outline: none;
+        }
+
+        &--invalid {
+            border-color: var(--danger);
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 4px;
+        margin-top: 5px;
+        position: absolute;
+        right: 0;
+        z-index: var(--z-index-sticky);
+
+        &--button {
+            width: 30px;
+            height: 30px;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 2px;
+            cursor: pointer;
+            box-shadow: 0 0 1px rgba(18,38,63, .4), 0px 0px 0.625rem 0.25rem rgba(18,38,63, 0.05);
+
+            &:hover {
+                background-color: var(--neutral-50);
+            }
+        }
+    }
+}
+
+[data-theme="dark"] {
+    .inline-edit-container {
+        &__reading {
+            color: #b4bfd3;
+            
+            &:hover {
+                background-color: rgba($color: #fff, $alpha: .05);
+            }
+        }
+    
+        &__editing {
+            border: 1.5px solid var(--primary);
+    
+            &:focus {
+                outline: none;
+                color: #b4bfd3;
+            }
+        }
+    
+        &__buttons {
+            &--button {
+                background-color: var(--neutral-700);
+                color: #b4bfd3;
+
+                &:hover {
+                    background-color: #2D3C52;
+                }
+            }
+        }
+    }
+}

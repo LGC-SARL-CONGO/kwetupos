@@ -1,0 +1,119 @@
+.tabs-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--white);
+    position: relative;
+    padding: 16px;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin-bottom: -5px;
+            height: 2px;
+            background-color: var(--neutral-100);
+        }
+        
+        .tab-item {
+          text-align: left;
+          padding: 0;
+          border-bottom: 2px solid var(--gray-300);
+          cursor: pointer;
+        
+          &--active {
+            .tab-item__title {
+                color: var(--primary);
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    margin-bottom: -8px;
+                    height: 2px;
+                    background-color: var(--primary);
+                }
+            }
+          }
+
+          &__title {
+            font-weight: normal;
+            color: var(--neutral-700);
+            width: 100%;
+            position: relative;
+            font-weight: 450;
+
+            &:hover::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin-bottom: -8px;
+                height: 2px;
+                background-color: var(--neutral-200);
+            }
+          }
+        }
+        
+    }
+
+    &__content {
+        padding: 16px 0;
+        margin-top: 10px;
+
+        .tab-container {
+            width: 100%;
+            display: none;
+        
+            &.active {
+                display: block;
+            }
+        }
+    }
+}
+
+[data-theme="dark"] {
+    .tabs-container {
+        background-color: transparent;
+
+        &__header {
+            .tab-item {
+                border-color:rgba(255, 255, 255, .1);
+
+                &--active {
+                    .tab-item__title {
+                        color: var(--primary);
+        
+                        &::after {
+                            background-color: var(--primary);
+                        }
+                    }
+                }
+    
+                &__title {
+                    color: rgba($color: #fff, $alpha: .8);
+                }
+            }
+
+            &::before {
+                background-color: var(--ct-white-dark);
+            }
+        }
+
+        &__content {
+           color: #b4bfd3;
+        }
+    }
+}
+  

@@ -1,0 +1,84 @@
+.file-manager-container {
+    color: var(--ct-sub-title-color);
+
+    &__content {
+        background-color: var(--white);
+        box-shadow: var(--box-shadow);
+        border-radius: var(--border-radius);
+
+        .manager__header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--gray-200);
+            color: var(--ct-icon-color);
+            font-size: 14px;
+            padding: 12px 16px;
+
+            .custom__dropdown__icon {
+                background-color: transparent;
+            }
+
+            .manager__selected {
+                color: var(--text);
+                // font-weight: 500;
+                margin-top: -5px;
+                padding-left: 8px;
+            }
+        
+            .actions {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+        
+                div {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: var(--border-radius);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid transparent;
+        
+                    &:hover {
+                        svg {
+                            color: var(--primary);
+                        }
+                    }
+                }
+        
+                svg {
+                    font-size: var(--ct-icon-size);
+                    color: #807e94;
+                    cursor: pointer;
+                }
+
+                .active {
+                    svg {
+                        color: var(--primary);
+                    }
+                }
+            }
+
+            svg {
+                font-size: 20px;
+            }
+        }
+
+        .manager__content {
+            padding: 16px;
+        }
+    }
+}
+
+[data-theme="dark"] {
+    .file-manager-container {
+        &__content {
+            background-color: var(--ct-background-card-dark);
+
+            .manager__header {
+                border-color: var(--ct-border-color-dark);
+            }
+        }
+    }
+}
